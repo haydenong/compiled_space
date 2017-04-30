@@ -8,10 +8,12 @@
                         <div class="card-content">
                             <!--<p><strong>Total Max Energy Output/Day:-->
                             <!--<input type="number" ng-model="ctrl.maxWatts">watts</strong></p>-->
-                            <span class="card-title">Total Max Energy Output/Day:
+                            <span class="card-title">Select Date:
                             <span class="input-field inline">
-                                <input id="maxOutput" type="number" ng-model="ctrl.maxWatts">
-                                <label for="maxOutput" data-error="wrong" data-success="right">watts</label>
+                                <input id="maxOutput" type="date" ng-model="ctrl.maxWatts" ng-change="ctrl.dailyEO()">
+                                <!--<label for="maxOutput" data-error="wrong" data-success="right">watts</label>-->
+                               Total Max Energy Output/Day: {{ ctrl.dEO }} watts/day
+                               
                             </span>
                             </span>
                         </div>
