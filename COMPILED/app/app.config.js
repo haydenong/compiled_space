@@ -10,7 +10,7 @@
                 url: '/home',
                 templateUrl: '/app/views/home.html',
                 controller: 'MacroCtrl',
-                controllerAs: 'ctrl'
+                controllerAs: 'ctrl',
             })
             .state('calc', {
                 url: '/calc',

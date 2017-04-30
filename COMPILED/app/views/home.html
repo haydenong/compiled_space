@@ -5,16 +5,45 @@
             <p class="center-align">Choose your panel</p>
             <div class="solar-panel">
                 <div class="row">
+                    <div class="card" ng-click="ctrl.activateMono()">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://energyinformative.org/wp-content/uploads/2013/06/monocrystalline-solar-installation-e1372104826549.jpg">
+                        </div>
+                        <div class="card-content" ng-class="{'teal lighten-2': ctrl.activatedMono}">
+                            <span class="card-title activator grey-text text-darken-4">Monocrystalline solar panels<i class="material-icons right">more_vert</i></span>
+                            <p><a ng-click="ctrl.activateMono()">Click to choose</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Monocrystalline solar panels<i class="material-icons right">close</i></span>
+                            <p>This solar panel is mid-priced and has an efficiency of 18-20%.</p>
+                        </div>
+                    </div>
 
-                    <div class="card">
-                        <div class="card-content">
-                            <p>This solar panel is mid-priced and has an efficiency of 20%.</p>
+                    <div class="card" ng-click="ctrl.activatePoly()">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://energyinformative.org/wp-content/uploads/2013/06/solar-panel-installation-e1372104921792.jpg">
                         </div>
-                        <div class="card-action">
-                            <a href="#">Panel A</a>
+                        <div class="card-content" ng-class="{'teal lighten-2': ctrl.activatedPoly}">
+                            <span class="card-title activator grey-text text-darken-4">Polycrystalline solar panel<i class="material-icons right">more_vert</i></span>
+                            <p><a ng-click="ctrl.activatePoly()">Click to choose</a></p>
                         </div>
-                        <div class="card-action">
-                            <a ui-sref="calc">Micro</a>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Polycrystalline solar panel<i class="material-icons right">close</i></span>
+                            <p>This solar panel is expensive but has an efficiency of 22%.</p>
+                        </div>
+                    </div>
+
+                    <div class="card" ng-click="ctrl.activateThin()">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="http://energyinformative.org/wp-content/uploads/2013/06/thin-film-solar-panels-e1372104973762.jpg">
+                        </div>
+                        <div class="card-content" ng-class="{'teal lighten-2': ctrl.activatedThin}">
+                            <span class="card-title activator grey-text text-darken-4">Thin film solar panel<i class="material-icons right">more_vert</i></span>
+                            <p><a ng-click="ctrl.activateThin()">Click to choose</a></p>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Thin film solar panel<i class="material-icons right">close</i></span>
+                            <p>This solar panel is lowly-priced and has an efficiency of 10-15%.</p>
                         </div>
                     </div>
 
@@ -88,7 +117,30 @@
 
         <div class="row">
             <div class="col s12">
-                <div class="dashboard"></div>
+                <div>
+                    <ul class="col s12">
+                        <li class="col s6">
+                            <h4>September</h4>
+                            <a class="waves-effect waves-light btn" onclick="monthlyEnergy(09)">Calculate</a>
+                            <span id="m9">0</span> W
+                        </li>
+                        <li class="col s6">
+                            <h4>October</h4>
+                            <a class="waves-effect waves-light btn" onclick="monthlyEnergy(10)">Calculate</a>
+                            <span id="m10">0</span> W
+                        </li>
+                        <li class="col s6">
+                            <h4>November</h4>
+                            <a class="waves-effect waves-light btn" onclick="monthlyEnergy(11)"></i>Calculate</a>
+                            <span id="m11">0</span> W
+                        </li>
+                        <li class="col s6">
+                            <h4>December</h4>
+                            <a class="waves-effect waves-light btn" onclick="monthlyEnergy(12)"></i>Calculate</a>
+                            <span id="m12">0</span> W
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
