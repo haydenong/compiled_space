@@ -1,0 +1,51 @@
+.wire-frame,
+.meteo-data,
+.map,
+.dashboard {
+  border: 5px solid black;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 50vh;
+}
+
+.solar-panel {
+  min-height: 80vh;
+}
+
+.meteo-data {
+  min-height: 15vh;
+}
+
+.map {
+  min-height: 50vh;
+}
+
+.dashboard {
+  min-height: 15vh;
+}
+
+.map-container {
+  position: relative;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto', 'sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}

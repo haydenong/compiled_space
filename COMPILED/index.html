@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="spaceApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/stylesheets/index.css">
+    <title>Gotta Catch 'Em All - Solar Beams</title>
+</head>
+
+<body>
+<div ui-view></div>
+
+
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/raphael/raphael.min.js"></script>
+<script src="/bower_components/justgage/justgage.js"></script>
+<script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/app.config.js"></script>
+<script src="app/services/svc.js"></script>
+<script src="app/controllers/MacroCtrl.js"></script>
+<script src="app/controllers/MicroCtrl.js"></script>
+<script src="app/map.js"></script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzhvpqprw0YuSkIwAN2-2IAvDt6fJha6c&callback=initMap">
+</script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<div class="container" ng-controller="MicroCtrl as ctrl">
+    <div class="row">
+        <div class="col s8">
+            <h3 class="center-align">Energy Expediture Calculator</h3>
+            <div class="solar-panel">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-content">
+                            <!--<p><strong>Total Max Energy Output/Day:-->
+                            <!--<input type="number" ng-model="ctrl.maxWatts">watts</strong></p>-->
+                            <span class="card-title">Total Max Energy Output/Day:
+                            <span class="input-field inline">
+                                <input id="maxOutput" type="number" ng-model="ctrl.maxWatts">
+                                <label for="maxOutput" data-error="wrong" data-success="right">watts</label>
+                            </span>
+                            </span>
+                        </div>
+                        <div class="card-action center-align teal" ng-show="!ctrl.warningFalse">
+                            <span class="white-text">{{ctrl.warning}}</span>
+                        </div>
+                        <div class="card-action center-align red" ng-show="ctrl.warningFalse">
+                            <span class="white-text">{{ctrl.warning}}</span>
+                        </div>
+                        <div class="card-action" ng-repeat="expenditure in ctrl.energyExpenditure track by $index">
+                            {{expenditure.title}} ({{expenditure.watts}} watts/hr) x
+                            <!--<input ng-model="expenditure.duration" type="number" value="0">-->
+                            <div class="input-field inline">
+                                <input id="minutes" type="number" class="validate" ng-model="expenditure.duration">
+                                <label for="minutes" data-error="wrong" data-success="right">minutes</label>
+                            </div>
+                            = {{ctrl.calcWatts($index, ctrl.energyExpenditure[$index], expenditure.duration)}} watts
+                            <!--<a ng-click="ctrl.delete($index)">DELETE</a>-->
+                            <div class="btn-floating btn-small halfway-fab waves-effect waves-light black" ng-click="ctrl.delete($index)">
+                                <i class="material-icons right">delete</i>
+                            </div>
+                        </div>
+                        <div class="card-action" ng-show="!ctrl.energyExpenditure[0]">
+                            Nothing listed yet, please click an appliance on the right to get started.
+                        </div>
+                        <div class="card-action">
+                            <strong>Total energy expediture: {{ctrl.totalExpenditure()}} watts </strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s4">
+            <div class="row">
+                <div class="col s12">
+                    <h3 class="center-align">
+                        Appliances
+                    </h3>
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Click to select appliance</span>
+                        </div>
+                        <!--<div class="card-action" ng-click="ctrl.addToExpenditure(ctrl.applianceArray[$index])" ng-repeat="appliance in ctrl.applianceArray">-->
+                        <!--{{appliance.title}} - {{appliance.watts}} watts per hour-->
+                        <!--</div>-->
+
+                        <div class="collection">
+                            <a class="collection-item" ng-click="ctrl.addToExpenditure(ctrl.applianceArray[$index])" ng-repeat="appliance in ctrl.applianceArray">
+                                <strong>{{appliance.title}}:</strong> {{appliance.watts}} watts per hour
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="fixed-action-btn">
+    <a ui-sref="home" class="btn-floating btn-large red">
+        <i class="large material-icons">fast_rewind</i>
+    </a>
+</div>

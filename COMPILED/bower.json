@@ -1,0 +1,24 @@
+{
+  "name": "spaceapp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Hayden Ong <hayden.nimo@ymail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/haydenong/spaceapp",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "materialize": "^0.98.2",
+    "angular-ui-router": "^0.4.2",
+    "justgage": "*",
+    "raphael": "^2.2.7"
+  }
+}
