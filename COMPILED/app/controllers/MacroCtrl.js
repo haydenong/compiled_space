@@ -16,7 +16,9 @@
         vm.totalEnergyOP = rad.map(function (rad) {
             return (rad.radiation * 0.2 * markerCount);
         });
-
+        total = function (value) {
+            return (value.radiation * 0.2 * markerCount);
+        }
         // Radiation gauge
         vm.g = new JustGage({
             id: "gauge",
